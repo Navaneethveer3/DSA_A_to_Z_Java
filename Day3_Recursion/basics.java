@@ -6,14 +6,14 @@ public class basics {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		sc.close();
-		printUptoN(n,1);
+		printUptoN(n);
 		System.out.println();
 		printFromN(n);
 	}
-	static void printUptoN(int n, int i) {
-		if(i==n+1) return;
-		System.out.print(i+" ");
-		printUptoN(n,i+1);
+	static void printUptoN(int n) {
+		if(n==0) return;
+		printUptoN(n-1);
+		System.out.print(n+" ");
 	}
 	static void printFromN(int n) {
 		if(n==0) return;
