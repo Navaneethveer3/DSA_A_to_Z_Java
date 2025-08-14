@@ -6,8 +6,10 @@ public class basics {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		sc.close();
+		//Print from 1 to n
 		printUptoN(n);
 		System.out.println();
+		//Print from n to 1
 		printFromN(n);
 	}
 	static void printUptoN(int n) {
