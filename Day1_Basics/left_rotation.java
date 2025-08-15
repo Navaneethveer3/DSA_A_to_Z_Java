@@ -1,11 +1,10 @@
 import java.util.*;
 
-public class rotation {
+public class left_rotation {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
-		String temp = str;
 		int k = sc.nextInt();
 		sc.close();
 		int n = str.length();
@@ -18,15 +17,6 @@ public class rotation {
 		reverse(arr,0,n-1);
 		str = new String(arr);
 		System.out.println("Left Rotated String is : "+str);
-		str = temp;
-		arr = str.toCharArray();
-		
-		//Right Rotation;
-		reverse(arr,0,k-1);
-		reverse(arr,k,n-1);
-		reverse(arr,0,n-1);
-		str = new String(arr);
-		System.out.println("Right Rotated String is : "+str);
 	}
 	static void reverse(char[] arr, int i , int j) {
 		while(i<=j) {
