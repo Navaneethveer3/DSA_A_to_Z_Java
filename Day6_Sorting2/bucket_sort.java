@@ -33,7 +33,7 @@ public class bucket_sort {
 			}
 		}
 		for(double i : nums) {
-			System.out.print(i+" ");
+			System.out.print(i+"  ");
 		}
 	}
 
