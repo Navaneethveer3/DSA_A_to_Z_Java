@@ -10,22 +10,32 @@ public class bucket_sort_integers {
 			small = Math.min(small, i);
 			large = Math.max(large, i);
 		}
+		
+		// Find LCM(small,large);
 		int lcm = (small*large)/gcd(small,large);
 		if(lcm==0) lcm = (small*large);
+		
+		// Create buckets of size LCM;
 		LinkedList<Integer>[] buckets = new LinkedList[lcm+1];
 		for(int i=0;i<lcm+1;i++) {
 			buckets[i] = new LinkedList<>();
 		}
 		for(int i : nums) {
+			
+			// Store at the relevant index bucket but dividing the value with LCM;
 			int ind = (int)Math.round(i/lcm);
 			buckets[ind].add(i);
 		}
-		int ind = 0;
 		for(int i=0;i<lcm+1;i++) {
+			
+			// Sort each buckets if the size of the bucket is size>1;
 			if(buckets[i].size()>1) {
 				Collections.sort(buckets[i]);
 			}
 		}
+		int ind = 0;
+		
+		// Copy back the sorted bucket values to original array;
 		for(int i=0;i<lcm+1;i++) {
 			if(buckets[i].size()!=0) {
 				for(int j : buckets[i]) {
