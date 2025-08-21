@@ -12,7 +12,7 @@ public class bucket_sort {
 			buckets[i] = new LinkedList<>();
 		}
 		for(int i=0;i<n;i++) {
-			int ind = (int)Math.round(nums[i]*10);
+			int ind = (int)Math.round(nums[i]*n);
 			buckets[ind].add(nums[i]);
 		}
 		for(int i=0;i<n;i++) {
