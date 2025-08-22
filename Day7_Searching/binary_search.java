@@ -5,6 +5,8 @@ public class binary_search {
 		int x = 3;
 		int low = 0;
 		int high = nums.length-1;
+
+		// Tc : O(logn);
 		while(low<=high) {
 			int mid = (low+high)/2;
 			if(nums[mid]==x) {
