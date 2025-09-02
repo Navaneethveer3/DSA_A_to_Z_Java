@@ -7,6 +7,8 @@ class Solution {
         Stack<Character> stk = new Stack<>();
         for(char c : s.toCharArray()){
             hash[c-'a']--;
+
+            // Maintain Lexocographical order;
             while(!stk.isEmpty() && hash[stk.peek()-'a']>0 && stk.peek()>c && !stk.contains(c)){
                 stk.pop();
             }
