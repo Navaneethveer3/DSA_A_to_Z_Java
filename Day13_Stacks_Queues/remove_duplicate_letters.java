@@ -8,7 +8,7 @@ class Solution {
         for(char c : s.toCharArray()){
             hash[c-'a']--;
 
-            // Maintain Lexocographical order;
+            // Maintain Lexicographical order;
             while(!stk.isEmpty() && hash[stk.peek()-'a']>0 && stk.peek()>c && !stk.contains(c)){
                 stk.pop();
             }
